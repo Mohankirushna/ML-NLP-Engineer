@@ -26,10 +26,51 @@ The goal of this project is to develop an automated system for sentiment analysi
 This problem serves as a benchmark for evaluating the effectiveness of transformer-based models in understanding and classifying sentiment in user-generated content.
 
 ## Dataset
-- **Source**: [Dataset source]
-- **Size**: [Number of training/validation/test examples]
-- **Class Distribution**: [Class distribution details]
-- **Preprocessing**: [Any text cleaning or preprocessing steps]
+
+### Source
+- **Primary Source**: [IMDB Movie Reviews Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews) via Hugging Face Datasets
+- **Original Paper**: [Learning Word Vectors for Sentiment Analysis](https://ai.stanford.edu/~amaas/papers/wvSent_acl2011.pdf)
+
+### Size
+- **Total Reviews**: 50,000
+- **Training Set**: 25,000 reviews
+- **Test Set**: 25,000 reviews
+- **Validation Split**: 20% of training data (5,000 reviews)
+
+### Class Distribution
+- **Perfectly Balanced**:
+  - Positive Reviews: 25,000 (50%)
+  - Negative Reviews: 25,000 (50%)
+- **No Class Imbalance**:
+  - Training Set: 12,500 positive / 12,500 negative
+  - Test Set: 12,500 positive / 12,500 negative
+
+### Preprocessing
+1. **Text Cleaning**:
+   - Converted text to lowercase
+   - Removed HTML tags
+   - Removed special characters and extra whitespace
+   - Handled contractions (e.g., "don't" → "do not")
+
+2. **Tokenization**:
+   - Used DistilBERT's tokenizer with WordPiece
+   - Maximum sequence length: 128 tokens
+   - Added special tokens: [CLS], [SEP], [PAD]
+
+3. **Data Splitting**:
+   - 80/20 train/validation split on training set
+   - Stratified splitting to maintain class distribution
+   - Random seed (42) for reproducibility
+
+4. **Handling**:
+   - Dynamic padding for efficient batching
+   - Attention masks for variable-length sequences
+   - Automatic device placement (GPU/CPU)
+
+5. **Data Augmentation** (Optional):
+   - Synonym replacement
+   - Random word deletion
+   - Word order shuffling within sentences
 
 ## Approach
 
