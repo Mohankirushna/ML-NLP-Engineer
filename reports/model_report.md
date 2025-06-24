@@ -2,22 +2,26 @@
 
 ## Model Architecture
 
-- **Base Model**: BERT (bert-base-uncased)
+- **Base Model**: DistilBERT (distilbert-base-uncased)
 - **Task**: Text Classification
 - **Number of Classes**: 2
 - **Sequence Length**: 128 tokens
 - **Pooling Strategy**: [CLS] token representation
+- **Device**: Automatically selects CUDA/MPS/CPU
 
 ## Training Configuration
 
 | Parameter | Value |
 |-----------|-------|
 | Batch Size | 16 |
-| Learning Rate | 2e-5 |
+| Learning Rate | 5e-5 |
 | Epochs | 3 |
 | Optimizer | AdamW |
 | Weight Decay | 0.01 |
 | Warmup Steps | 0 |
+| Gradient Accumulation Steps | 4 |
+| Mixed Precision Training | Enabled |
+| Early Stopping Patience | 3 |
 | Mixed Precision | fp16 |
 
 ## Training Insights
