@@ -27,11 +27,11 @@
 ## Training Insights
 
 ### Data
-- Training Examples: [Number]
-- Validation Examples: [Number]
-- Class Distribution:
-  - Class 0: 12,500 instances
-  - Class 1: 12,500 instances
+- Training Examples: 25,000 (80% of total)
+- Validation Examples: 12,500 (20% of total)
+- Class Distribution (Perfectly Balanced):
+  - Class 0 (Negative): 12,500 instances (50%)
+  - Class 1 (Positive): 12,500 instances (50%)
 
 ### Performance
 - **Accuracy**: 87.44%
