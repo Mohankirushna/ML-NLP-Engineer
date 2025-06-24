@@ -30,8 +30,8 @@
 - Training Examples: [Number]
 - Validation Examples: [Number]
 - Class Distribution:
-  - Class 0: [%]
-  - Class 1: [%]
+  - Class 0: 12,500 instances
+  - Class 1: 12,500 instances
 
 ### Performance
 - **Accuracy**: 87.44%
