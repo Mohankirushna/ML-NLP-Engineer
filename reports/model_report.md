@@ -34,13 +34,12 @@
   - Class 1: [%]
 
 ### Performance
-- Best Epoch: [Epoch Number]
-- Training Loss: [Value]
-- Validation Loss: [Value]
-- F1 Score: [Value]
-- Accuracy: [Value]
-- Precision: [Value]
-- Recall: [Value]
+- **Accuracy**: 87.44%
+- **Precision**: 87.46%
+- **Recall**: 87.44%
+- **F1 Score**: 87.43%
+
+*Note: These metrics are on the test set. Training and validation metrics are tracked during training.*
 
 ## Key Observations
 1. **Convergence**: [Describe how the model converged]
