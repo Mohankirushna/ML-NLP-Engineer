@@ -4,7 +4,26 @@
 This document outlines the approach, model decisions, and key learnings from developing a text classification system using transformer-based models.
 
 ## Problem Statement
-[Briefly describe the text classification problem you're solving]
+
+The goal of this project is to develop an automated system for sentiment analysis of movie reviews from the IMDB dataset. The system should accurately classify each review as either positive or negative based on its content.
+
+### Key Challenges:
+1. **Contextual Understanding**: The model must understand nuanced language, including sarcasm, irony, and mixed sentiments.
+2. **Text Length Variability**: Reviews vary significantly in length, from short comments to detailed analyses.
+3. **Domain-Specific Language**: The model needs to recognize film-related terminology and how it influences sentiment.
+4. **Balanced Classification**: The system must perform equally well on both positive and negative reviews.
+
+### Business Impact:
+- **Film Industry**: Studios can gauge audience reception to movies in real-time.
+- **Streaming Platforms**: Improve recommendation systems based on user reviews.
+- **Consumers**: Quickly identify overall sentiment about movies before watching.
+
+### Success Metrics:
+- **Primary**: Achieve >85% accuracy in sentiment classification
+- **Secondary**: Maintain balanced precision and recall for both positive and negative classes
+- **Tertiary**: Process reviews efficiently for real-time analysis
+
+This problem serves as a benchmark for evaluating the effectiveness of transformer-based models in understanding and classifying sentiment in user-generated content.
 
 ## Dataset
 - **Source**: [Dataset source]
