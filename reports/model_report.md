@@ -103,7 +103,3 @@ The model shows slightly better performance in identifying positive reviews comp
    - Implement gradient accumulation for larger effective batch sizes
    - Try different optimizers (e.g., Adam, SGD with momentum)
 
-## Next Steps
-1. [Next immediate action]
-2. [Future experiments to try]
-3. [Potential A/B testing]
