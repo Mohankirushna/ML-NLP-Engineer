@@ -96,4 +96,9 @@ We’re considering:
 
 ## 🎉 Conclusion (5:00 - 5:15)
 
-This project demonstrates the practical application of modern NLP tools for sentiment classification. It’s lightweight, modular, and production-ready. You can check out the full codebase on GitHub and feel free to contribute or fork it for your own use. Thank you!
+This project demonstrates the practical application of modern NLP tools for sentiment classification. It’s lightweight, modular, and production-ready. You can check out the full codebase on GitHub and feel free to contribute or fork it for your own use.
+---
+
+## 🤝 Final Note (5:15 - 5:30)
+It was a truly rewarding experience working on this project. Exploring state-of-the-art NLP techniques with real-world data helped deepen my understanding of model optimization and deployment. I genuinely enjoyed collaborating on this topic and would love to continue working with you on more exciting projects in the future. Thank you once again!
+ Thank you!
