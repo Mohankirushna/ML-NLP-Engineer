@@ -81,10 +81,57 @@ This problem serves as a benchmark for evaluating the effectiveness of transform
   - Pre-trained on large corpus
   - Effective for transfer learning
 
-### 2. Architecture
-- **Model Architecture**: [Brief description]
-- **Tokenization**: WordPiece tokenization with a maximum length of 128 tokens
-- **Pooling**: [CLS] token representation for classification
+## Architecture
+
+### Model Architecture
+- **Base Model**: DistilBERT (distilbert-base-uncased)
+- **Architecture Type**: Transformer-based
+- **Layers**: 6 (compared to BERT's 12)
+- **Attention Heads**: 12
+- **Hidden Size**: 768
+- **Parameters**: 66M (40% fewer than BERT)
+- **Activation**: GeLU (Gaussian Error Linear Unit)
+- **Normalization**: Layer Normalization
+
+### Classification Head
+- **Input**: [CLS] token representation (768-dimensional)
+- **Hidden Layer**: Dropout (p=0.1)
+- **Output Layer**: Linear → Softmax
+- **Output Size**: 2 (Positive/Negative)
+
+### Tokenization
+- **Tokenizer**: DistilBERT Tokenizer
+- **Vocabulary Size**: 30,522
+- **Max Length**: 128 tokens
+- **Special Tokens**:
+  - [CLS] - Classification token
+  - [SEP] - Separator token
+  - [PAD] - Padding token
+  - [UNK] - Unknown token
+- **Truncation**: Right truncation
+- **Padding**: Dynamic padding to longest sequence in batch
+
+### Embedding
+- **Token Embeddings**: 30,522 × 768
+- **Position Embeddings**: 512 × 768
+- **Segment Embeddings**: Not used (single-segment classification)
+- **Final Embedding**: Sum of token and position embeddings
+
+### Pooling Strategy
+- **Method**: [CLS] token representation
+- **Dimension**: 768
+- **Rationale**: The [CLS] token is trained to capture sentence-level representations
+
+### Training Configuration
+- **Optimizer**: AdamW
+- **Learning Rate**: 5e-5
+- **Batch Size**: 16 (effective 64 with gradient accumulation)
+- **Warmup Steps**: 0
+- **Weight Decay**: 0.01
+- **Epochs**: 3
+- **Gradient Accumulation Steps**: 4
+- **Mixed Precision Training**: Enabled (FP16)
+- **Early Stopping**: Patience of 3 epochs
 
 ### 3. Training Strategy
 - **Hyperparameters**:
