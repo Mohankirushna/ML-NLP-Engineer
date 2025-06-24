@@ -6,26 +6,47 @@ This project implements a text classification model using DistilBERT, a distille
 
 ```
 .
-├── .git/                      # Git version control
-├── .gitignore                 # Git ignore file
-├── notebooks/                 # Jupyter notebooks for exploration and analysis
-├── src/                       # Source code
-│   ├── __init__.py            # Python package initialization
-│   ├── train_model.py         # Main training script with custom Trainer class
-│   ├── data_preprocessing.py  # Data loading and preprocessing utilities
-│   ├── model_utils.py         # Model architecture and utility functions
-│   ├── evaluation.py          # Model evaluation and metrics
-│   └── config.py             # Configuration settings and hyperparameters
-├── models/                    # Trained models and checkpoints
-│   └── ...                    # Model checkpoints and saved models
-├── tokenizer/                 # Saved tokenizer files
-│   └── ...                    # Tokenizer configuration and vocabulary
-├── reports/                   # Evaluation reports and visualizations
-│   └── ...                    # Generated reports and figures
-├── requirements.txt           # Python dependencies
-├── train.py                   # Training script entry point
-├── submission.md              # Project report and documentation
-└── README.md                 # This file
+├── .git/                           # Git version control
+├── .gitignore                      # Git ignore file
+│
+├── notebooks/                     # Jupyter notebooks for exploration and analysis
+│   ├── data_exploration.ipynb      # Initial data analysis and visualization
+│   ├── model_training.ipynb        # Model training experiments
+│   └── evaluation_analysis.ipynb   # Model evaluation and result analysis
+│
+├── src/                          # Source code
+│   ├── __init__.py                 # Python package initialization
+│   ├── train_model.py              # Main training script with custom Trainer class
+│   ├── data_preprocessing.py       # Data loading and preprocessing utilities
+│   ├── model_utils.py              # Model architecture and utility functions
+│   ├── evaluation.py               # Model evaluation and metrics
+│   └── config.py                   # Configuration settings and hyperparameters
+│
+├── models/                       # Trained models and checkpoints
+│   ├── trained_model/              # Best trained model
+│   │   ├── config.json             # Model configuration
+│   │   ├── training_metrics.json   # Training history and metrics
+│   │   ├── val_labels.npy          # Validation set true labels
+│   │   └── val_predictions.npy     # Validation set predictions
+│   └── reports/                    # Model evaluation visualizations
+│       ├── confusion_matrix.png     # Confusion matrix plot
+│       ├── roc_curve.png           # ROC curve
+│       └── precision_recall_curve.png  # Precision-Recall curve
+│
+├── tokenizer/                    # Saved tokenizer files
+│   ├── tokenizer_config.json       # Tokenizer configuration
+│   ├── special_tokens_map.json     # Special tokens mapping
+│   └── vocab.txt                   # Vocabulary file
+│
+├── reports/                      # Project reports and metrics
+│   ├── model_report.md             # Detailed model analysis report
+│   ├── confusion_matrix.png        # Confusion matrix visualization
+│   └── evaluation_metrics.json     # Evaluation metrics in JSON format
+│
+├── requirements.txt              # Python dependencies
+├── train.py                       # Training script entry point
+├── submission.md                  # Project report and documentation
+└── README.md                      # This file
 ```
 
 ## Features
